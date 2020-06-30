@@ -1,0 +1,92 @@
+ {% extends 'base.html' %}
+
+ {% block title %}Information Field{% endblock title%}
+
+ {% block body %}
+ <div class="mx-auto" style="width=600px; ">
+  <div class="container">
+<form method="POST" action="/getInformation" >
+{% csrf_token %}
+    <div class="form-row">
+     <div class="col">
+     <label for="inputfirstname">First Name</label>
+       <input name="firstname" type="text" class="form-control" id="inputfirstname" placeholder="First name">
+     </div>
+    <div class="col">
+    <label for="inputlastname">Last Name</label>
+      <input name="lastname" type="text" class="form-control" id="inputlastname" placeholder="Last name">
+    </div>
+     </div>
+     <div class="form-row">
+     <div class="col">
+     <label for="inputcotact">Contact</label>
+       <input name="contactnumber" type="text" class="form-control" id="inputcotact" placeholder="Contact number">
+     </div>
+    <div class="col">
+    <label for="inputemail">Email</label>
+      <input name="email" type="email" class="form-control" id="inputemail" placeholder="email">
+    </div>
+     </div>
+  <div class="form-group">
+    <label for="inputAddress">Local Address</label>
+    <input name="localaddress" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Permenant Address</label>
+    <input name="permenantaddress" type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+
+
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Career Objective</label>
+    <textarea  name="careerobjective"class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Skills</label>
+    <div class="form-check form-check-inline">
+         <input name="skill1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Python">
+        <label class="form-check-label" for="inlineCheckbox1">Python</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input name="skill2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Web Development">
+        <label class="form-check-label" for="inlineCheckbox2">Web Development</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input name="skill3" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Machine Learning">
+        <label class="form-check-label" for="inlineCheckbox2">Machine Learning</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Internship</label>
+    <textarea  name="internship" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Title  Desciption"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Educational Details</label>
+    <input type="text"  name="ssc" class="form-control" id="exampleFormControlTextarea1"  placeholder="SSC">
+    <input type="text"  name="hsc" class="form-control" id="exampleFormControlTextarea1"  placeholder="HSC(Equvivalet)">
+    <input type="text"  name="cgpa" class="form-control" id="exampleFormControlTextarea1"  placeholder="CGPA">
+  </div>
+  
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Projects</label>
+    <textarea  name="project1" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Project1 Title Description"></textarea>
+    <textarea  name="project2" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Project2 Title Description"></textarea>
+    <textarea  name="project3" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Project3 Title Description"></textarea>
+  </div>
+
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Reegister</button>
+</form>
+  </div>
+ {% endblock body %}

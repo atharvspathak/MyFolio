@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %}CV{% endblock title %}
+
+{% block body %}
+<style>
+    .container{
+        max-width: 724px;
+        background-color: white;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-style: oblique;
+
+    }
+
+    h2{
+        position: relative;
+        margin-left: 30%;
+        font-weight: bolder;
+        font-style: oblique;
+    }
+    
+</style>
+<div style="background-color: rgb(230, 218, 206);">
+<div class="mx-auto" width="auto" style="background-color: rgb(230, 218, 206);">
+    <div class="container-fluid py-3" style="background-color: white; margin-left: ;">
+        <h2 style="margin-left: 5%;">{{abc.firstname}} {{abc.lasttname}}</h2>
+    </div>
+
+    <h1 style="text-align: center; margin-top: 2rem; margin-bottom: 2rem; font-weight: bolder; font-style: oblique;">RESUME</h1>
+
+    <h2>CAREER OBJECTIVE</h2>
+    <div class="container center">
+        <p>{{abc.careerobjective}}</p>
+    </div>
+
+    <h2>SKILLS</h2>
+    <div class="container center">
+        <h5 >{{abc.skill1}}</h5>
+        <h5>{{abc.skill2}}</h5>
+        <h5>{{abc.skill3}}</h5>
+    </div>
+
+    <h2>INTERNSHIP</h2>
+    <div class="container center">
+        <p>{{abc.internship}}</p>
+    </div>
+
+    <h2>EDUCATIONAL QUALIFICATION</h2>
+    <div class="container center">
+      
+        <h5>SSC : {{abc.ssc}}</h5>
+        <h5>HSC : {{abc.hsc}}</h5>
+        <h5>CGPA: {{abc.cgpa}}</h5>
+    </div>
+
+
+    <ul class="nav nav-pills nav-fill py-3 my-2" style="background-color: black;">
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{abc.contact}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{abc.email}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="text" href="#">{{abc.localaddress}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="text " href="#">{{abc.permenantaddress}}</a>
+        </li>
+      </ul> 
+</div>
+
+</div>
+
+{% endblock body %}
+
